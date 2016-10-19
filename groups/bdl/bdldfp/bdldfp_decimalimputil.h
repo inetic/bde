@@ -1568,6 +1568,7 @@ DecimalImpUtil::convertToDPD(ValueType128 value)
 
                         // Binary Integral Conversion Functions
 
+#ifndef BDLDFP_DECIMALPLATFORM_DECNUMBER
 inline
 DecimalImpUtil::ValueType32
 DecimalImpUtil::convertFromBID(
@@ -1612,6 +1613,7 @@ DecimalImpUtil::convertToBID(ValueType128 value)
 {
     return Imp::convertToBID(value);
 }
+#endif // ifndef BDLDFP_DECIMALPLATFORM_DECNUMBER
 
 }  // close package namespace
 }  // close enterprise namespace

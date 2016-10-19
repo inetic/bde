@@ -816,6 +816,7 @@ struct DecimalConvertUtil {
 
 // PRIVATE CLASS METHODS
 
+#ifndef BDLDFP_DECIMALPLATFORM_DECNUMBER
 inline
 int DecimalConvertUtil::decimal64ToUnpackedSpecial(
                                            bool                *isNegative,
@@ -873,6 +874,7 @@ Decimal64 DecimalConvertUtil::decimal64FromUnpackedSpecial(
     }
 #endif
 }
+#endif // ifndef BDLDFP_DECIMALPLATFORM_DECNUMBER
 
 inline
 Decimal64 DecimalConvertUtil::decimal64FromUnpackedSpecial(int mantissa,
@@ -1485,6 +1487,7 @@ DecimalConvertUtil::decimalFromBID(Decimal128          *decimal,
 
                         // decimalToDPD functions
 
+#ifndef BDLDFP_DECIMALPLATFORM_DECNUMBER
 inline
 void DecimalConvertUtil::decimal32ToDPD(unsigned char *buffer,
                                         Decimal32      decimal)
@@ -1597,6 +1600,7 @@ DecimalConvertUtil::decimalFromDPD(Decimal128          *decimal,
 {
     Imp::decimalFromDPD(decimal, buffer);
 }
+#endif // ifndef BDLDFP_DECIMALPLATFORM_DECNUMBER
 
 }  // close package namespace
 }  // close enterprise namespace
